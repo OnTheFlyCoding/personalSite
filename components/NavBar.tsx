@@ -31,7 +31,8 @@ const NavBar = () => {
     <nav className='flex gap-8'>
     {links.map((link,i) => (
       <Link href={link.path} key={i} className={`${link.path === pathname && 
-        'text-accent border-b-2 border-accent'} font-medium hover:text-accent`}> 
+        'text-accent border-b-2 border-accent'} font-medium
+         hover:text-accent`}> 
         {link.name}
       </Link>
     ))}
