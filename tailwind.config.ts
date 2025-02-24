@@ -11,7 +11,8 @@ export default {
   theme: {
 	container:{
 		center:true,
-		padding:'15px',
+		padding:'2rem',
+		
 	},
 	screens:{
 			sm:'640px',
