@@ -18,33 +18,42 @@ const projects = [
     category:'Frontend',
     description:'Landing page dedicated to gaining new members for a non-profit organization dedicated to raising politcal awareness of the DSA of Connecticut.',
     stack:[{name:'React'},{name:'Javascript'}, {name:'Css 3'},{name:'HTML 5'}],
-    image: images.work,
-    live:'url',
-    github:'/ontheflycoding/'
+    image: images.truct,
+    live:'https://truct.net',
+    github:'https://github.com/OnTheFlyCoding/truCTWebsite'
   },{
     num:'02',
     category:'Frontend',
-    description:'Landing page dedicated to gaining new members for a non-profit organization dedicated to raising politcal awareness of the DSA of Connecticut.',
-    stack:[{name:'React'},{name:'Javascript'}, {name:'Css 3'},{name:'HTML 5'}],
-    image:images.work,
-    live:'url',
-    github:'/ontheflycoding/'
+    description:'Dynamic replica of the apple home page in 2024. Showcasing my ability to control the flow of a website and use advanced programming to create an elegant and fluid user experience.',
+    stack:[{name : 'Next.js'},{name:'React'},{name:'Typescript'}, {name:'TailwindCss'}],
+    image:images.apple,
+    live:'https://github.com/OnTheFlyCoding/apple_website',
+    github:'https://github.com/OnTheFlyCoding/apple_website'
   },{
     num:'03',
-    category:'Frontend',
-    description:'Landing page dedicated to gaining new members for a non-profit organization dedicated to raising politcal awareness of the DSA of Connecticut.',
-    stack:[{name:'React'},{name:'Javascript'}, {name:'Css 3'},{name:'HTML 5'}],
-    image:images.work,
-    live:'url',
-    github:'/ontheflycoding/'
+    category:'Fullstack',
+    description:'Cosmetic Store website. Showcases new products, email subscription, online ordering, and much more. All tied together in a beautiful display.',
+    stack:[{name:'PHP'},{name:'Javascript'}, {name:'Css 3'},{name:'HTML 5'}, {name : 'SQL Lite'}],
+    image:images.toBe,
+    live:'https://www.2besmooth.com',
+    github:'https://github.com/OnTheFlyCoding'
   },{
     num:'04',
     category:'Fullstack',
-    description:'Landing page dedicated to gaining new members for a non-profit organization dedicated to raising politcal awareness of the DSA of Connecticut.',
-    stack:[{name:'React'},{name:'Javascript'}, {name:'Css 3'},{name:'HTML 5'}],
-    image:images.work,
-    live:'url',
-    github:'/ontheflycoding/'
+    description:'Local small business restaurant website. Ability to make online orders sent to their POS and integrate with major online delivery services. Weekly menu updates setup with CRON jobs.',
+    stack:[{name:'WordPress'},{name:'SQL Lite'}, {name:'Adobe '},{name:'HTML 5'}],
+    image:images.cafe,
+    live:'https://www.thetastegardencafe.com',
+    github:'https://github.com/OnTheFlyCoding'
+  },
+  {
+    num:'05',
+    category:'Frontend',
+    description:'Dynamic website for an Electric Bike Kit Company. The website showcases the DIY Electric Bike Kits for sale and useful information on how the organization began. A support page for common troubleshooting.',
+    stack:[{name:'React'},{name:'Javascript'}, {name:'Css 3'},{name:'HTML 5'}, {name:'Vite'}],
+    image:images.bvolt,
+    live:'https://ontheflycoding.github.io/bridgevolt_website',
+    github:'https://github.com/OnTheFlyCoding/bridgevolt_website'
   },
 ]
 const Work = () => {
@@ -140,7 +149,7 @@ const Work = () => {
                     <div className='absolute top-0 bottom-0 w-full h-full
                     bg-black/10 z-10'></div>
                     <div className='relative h-full w-full '>
-                      <Image src={project.image} alt='' fill className='object-cover'/>
+                      <Image src={project.image} alt='' fill className='object-fill'/>
                     </div>
                   </div>
                 </SwiperSlide>
