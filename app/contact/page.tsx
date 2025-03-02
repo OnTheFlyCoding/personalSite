@@ -12,6 +12,9 @@ import {
   SelectTrigger } from "@/components/ui/select";
 import {FaPhoneAlt, FaEnvelope, FaMapMarkerAlt} from 'react-icons/fa'
 import { SelectValue } from "@radix-ui/react-select";
+import { useState } from "react";
+import emailjs from '@emailjs/browser'
+import { error } from "console";
 const info = [
   {
     icon: <FaPhoneAlt/>,
@@ -27,7 +30,51 @@ const info = [
     description: 'North East, United States',
   },
 ]
+
+
+
 const Contact = () => {
+  
+  // States
+  const [firstname, setFirstName] = useState('')
+  const [lastname, setLastName] = useState('')
+  const [email, setEmail] = useState('')
+  const [phone, setPhone] = useState('')
+  const [message, setMessage] = useState('')
+  const [service, setService] = useState('')
+
+  const sendEmail = (e:any) => {
+    e.preventDefault();
+    //Requirements for emailjs
+    const serviceId = 'service_6nwkfdm';
+    const templateId = 'template_ujq41fs';
+    const publicKey = 'C6iKDCPMKskJh18lu';
+    //Create a new object that contains dynamic template params
+    const templateParams = {
+      from_name : firstname+ ' ' + lastname,
+      from_email: email,
+      to_name:'gio gonzalez',
+      message: message,
+      phone_number : phone,
+      service_type: service,
+    };
+    // Send Email with emailJs
+    emailjs.send(serviceId,templateId, templateParams, publicKey)
+    .then((response) => {
+      console.log('Email Sent Successfully', response);
+      setEmail('');
+      setFirstName('');
+      setLastName('');
+      setMessage('');
+      setPhone('');
+      setService('');
+
+    })
+    .catch((error) => {
+      console.error('Error sending Email: ',error );
+    })
+  }
+
   return (
     <motion.section 
     initial={{opacity:0}}
@@ -38,7 +85,7 @@ const Contact = () => {
         <div className="flex flex-col xl:flex-row gap-[30px]">
           {/* Form */}
           <div className="xl:w-[54%] order-2 xl:order-none">
-            <form action=""
+            <form onSubmit={sendEmail}
             className="flex flex-col gap-6 p-10 bg-[#27272c]
             rounded-xl">
               <h3 className="text-4xl text-accent">Lets Work Together</h3>
@@ -50,30 +97,58 @@ const Contact = () => {
               </p>
               {/* input */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input type="firstname" placeholder="Firstname"/>
-                <Input type="lasttname" placeholder="Lastname"/>
-                <Input type="email" placeholder="Email"/>
-                <Input type="phone" placeholder="Phone Number"/>
+                <Input 
+                type="firstname" 
+                placeholder="Firstname"
+                value={firstname}
+                onChange={(e) => setFirstName(e.target.value)}
+                />
+                <Input 
+                type="lasttname" 
+                placeholder="Lastname"
+                value={lastname}
+                onChange={(e) => setLastName(e.target.value)}
+                />
+                <Input 
+                type="email" 
+                placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                />
+                <Input 
+                type="phone" 
+                placeholder="Phone Number"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                />
               </div>
               {/* select */}
-              <Select>
+              <Select onValueChange={(e) => setService(e)}>
                 <SelectTrigger className="w-full">
                   <SelectValue placeholder="Select a service"/>
                 </SelectTrigger>
                 <SelectContent>
                   <SelectGroup>
                     <SelectLabel>Select a service</SelectLabel>
-                    <SelectItem value="est">Web Development</SelectItem>
-                    <SelectItem value="cst">Api - Web Scrapper</SelectItem>
-                    <SelectItem value="mst">UI/UX Design</SelectItem>
+                    <SelectItem value="Web Development" >Web Development</SelectItem>
+                    <SelectItem value="Api Builder/ Web Scrapper">Api - Web Scrapper</SelectItem>
+                    <SelectItem value="UI/X Design">UI/UX Design</SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>
               <Textarea className="h-[200px]"
               placeholder="Type Your Message Here :)"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
               />
               {/* Submit Button */}
-              <Button size={'md'} className="max-w-40">Send Message</Button>
+              <Button 
+              size={'md'} 
+              className="max-w-40" 
+              type="submit"
+              >
+                Send Message
+              </Button>
             </form>
           </div>
           {/* Info */}
