@@ -1,5 +1,5 @@
 'use client';
-import { AnimatePresence,motion } from 'motion/react'
+import { AnimatePresence } from 'motion/react'
 import { usePathname } from 'next/navigation'
 import React from 'react'
 import Stairs from './ui/Stairs';

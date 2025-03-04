@@ -14,7 +14,7 @@ import {FaPhoneAlt, FaEnvelope, FaMapMarkerAlt} from 'react-icons/fa'
 import { SelectValue } from "@radix-ui/react-select";
 import { useState } from "react";
 import emailjs from '@emailjs/browser'
-import { error } from "console";
+
 const info = [
   {
     icon: <FaPhoneAlt/>,
@@ -43,7 +43,7 @@ const Contact = () => {
   const [message, setMessage] = useState('')
   const [service, setService] = useState('')
 
-  const sendEmail = (e:any) => {
+  const sendEmail = (e:React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     //Requirements for emailjs
     const serviceId = 'service_6nwkfdm';
@@ -75,6 +75,7 @@ const Contact = () => {
     })
   }
 
+
   return (
     <motion.section 
     initial={{opacity:0}}
@@ -85,7 +86,7 @@ const Contact = () => {
         <div className="flex flex-col xl:flex-row gap-[30px]">
           {/* Form */}
           <div className="xl:w-[54%] order-2 xl:order-none">
-            <form onSubmit={sendEmail}
+            <form onSubmit={sendEmail} 
             className="flex flex-col gap-6 p-10 bg-[#27272c]
             rounded-xl">
               <h3 className="text-4xl text-accent">Lets Work Together</h3>
@@ -146,6 +147,7 @@ const Contact = () => {
               size={'md'} 
               className="max-w-40" 
               type="submit"
+              id="myButton"
               >
                 Send Message
               </Button>

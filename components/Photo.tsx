@@ -1,7 +1,7 @@
 'use client';
 import React from 'react'
 import Image from 'next/image'
-import { images } from '@/assets/assets';
+import { images } from '@/public/assets';
 import {motion} from 'motion/react'
 const Photo = () => {
   return (

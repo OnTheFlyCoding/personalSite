@@ -1,6 +1,5 @@
 import {FiDownload} from 'react-icons/fi'
 import { Button } from '@/components/ui/button'
-import Image from 'next/image'
 import Socials from '@/components/Socials'
 import Photo from '@/components/Photo'
 import Stats from '@/components/Stats'
@@ -15,7 +14,7 @@ const Home = () => {
           <div className='text-center xl:text-left order-2 xl:order-none'>
             <span className='text-xl'>Software Developer</span>
             <h1 className='h1 mb-6'>
-              Hello I'm <br /> <span className='text-accent'>Giovanni Gonzalez</span>
+              Hello I&apos;m <br /> <span className='text-accent'>Giovanni Gonzalez</span>
             </h1>
             <p className='max-w-[500px] mb-9 text-white/80  '> I excel at collaboration and crafting elegant digital experiences. 
               I am proficient in various programming languages and technologies.

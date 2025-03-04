@@ -6,22 +6,22 @@ const myServices = [
   {
     num:'01',
     title:'Web Development',
-    description:'asdfsad',
+    description:'Design fullstack applications for e-commerce and blog related sites. Static sites and landing pages to make your organization\'s ideas and good deeds known! ',
     href:'',
   },  {
     num:'02',
     title:'UI/UX Design',
-    description:'asdfsad',
+    description:'Complex grids and stunning 3D components to make your ideas and products come to life!',
     href:'',
   },  {
     num:'03',
     title:'Backend Development',
-    description:'asdfsad',
+    description:'Api development for projects and personal webscrappers to access data in your own database.',
     href:'',
   },  {
     num:'04 ',
     title:'DevSecOps',
-    description:'asdfsad',
+    description:'Provide development with security in mind. Assess the potential vulnerabilities within the website and the extent of a total takeover. Prevent theft, keep data secure, and your clients happy.',
     href:'',
   },
 ]

@@ -1,6 +1,6 @@
 'use client';
 import {motion} from 'motion/react'
-import {Swiper, SwiperClass, SwiperProps, SwiperRef, SwiperSlide} from 'swiper/react'
+import {Swiper, SwiperClass, SwiperSlide} from 'swiper/react'
 import React, { useState } from 'react';
 import 'swiper/css'
 import {BsArrowUpRight,BsGithub} from 'react-icons/bs'
@@ -9,7 +9,7 @@ import {
 } from '@/components/ui/tooltip';
 import Link from 'next/link'; 
 import Image from 'next/image';
-import { images } from '@/assets/assets';
+import { images } from '@/public/assets';
 import WorkSliderBtns from '@/components/WorkSliderBtns';
 
 const projects = [
@@ -149,7 +149,7 @@ const Work = () => {
                     <div className='absolute top-0 bottom-0 w-full h-full
                     bg-black/10 z-10'></div>
                     <div className='relative h-full w-full '>
-                      <Image src={project.image} alt='' fill className='object-fill'/>
+                      <Image src={project.image} alt='image' priority quality={100} fill className='object-fill'/>
                     </div>
                   </div>
                 </SwiperSlide>

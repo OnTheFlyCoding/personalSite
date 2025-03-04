@@ -6,7 +6,7 @@ import {SiTailwindcss, SiMongodb,
 const about = 
   {
     title:'About me',
-    description:'  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ipsa, voluptatum voluptatem itaque id cupiditate in consequuntur iure libero, culpa optio possimus deleniti. Consequatur, assumenda veniam laboriosam aliquam ipsum rem',
+    description:'I am a software engineer who loves to spend his time outdoors as much as possible. My parents took me on constant vacations to Mexico in order to keep me in touch with our families roots. It is there where I learned to love nature and have my first strong sense of belonging. I was a chef for 6 years after college and decided to attempt a career change. Three years in and I am in love with the tech industry! My cream and butter has for a majority of my life been my ability to problem solve and modulize components into much smaller & manageable one\'s.',
     info:[
       {
       fieldName:'Name',
@@ -16,7 +16,7 @@ const about =
       fieldValue:'(203) - 953 - 1523',
     },{
       fieldName:'Experience',
-      fieldValue:'3 Years',
+      fieldValue:'2 Years',
     },{
       fieldName:'Languages',
       fieldValue:'English, Spanish',
@@ -33,7 +33,7 @@ const about =
 const experience = {
   icon:'../assets/resumeIcon.png',
   title:'My Experience',
-  description:'asdfasda',
+  description:'I started my coding journey like most people, a frontend bootcamp. It was enough to get the basic down but not enough to get the attention of future clients. I became interested in making APIs and began making web scrappers for friends and for my own personal use like creating MLB stats actuator (fantasy baseball knows no limits). I\'ve familiarized myself with 3D animation and much more sophisticated style designs. I never intend to stop learning new technologies, so I will always be in the loop with updates and the latest trends!. A perfectionist who only wants to make the client and users happy! Whether it be a stylish website or a 8 course Omakase. Kanpai!',
   items:[
     {
       company:'Freelance Developer',
@@ -62,7 +62,7 @@ const experience = {
 const education = {
   icon:'../assets/edu-icon-dark.png',
   title:'My Education',
-  description:'asdfasda',
+  description:'After graduating High School I went to the University of Alabama for Chemical Engieering where I spent 2 years undergrade and 2 years as an intern. Ultimately moved back home to be closer to family and pursue a career as a chef. The last few years I\'ve taken bootcamps, differential equations at a local college, and other coding related courses to fill the gaps my prior engineering background did\'nt already cover.',
   items:[
     {
       institution:'Revature Bootcamp',
@@ -82,7 +82,7 @@ const education = {
 }
 const mySkills = {
   title:'My Skills',
-  description:'asdsasd',
+  description:'Currently learning: Remix fullstack framework, Solidity, and firebase.\nI have built various small web applications and games using the following technologies...',
   skillList: [
     {
       icon:<FaCss3/>,
@@ -186,7 +186,7 @@ const Resume = () => {
               <div className='flex flex-col gap-[30px] text-center xl:text-left '>
                   <h3 className='text-4xl font-bold'>{education.title}</h3>
                   <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0 '>
-                  {experience.description}
+                  {education.description}
                   </p>
                   <ScrollArea className='h-[400px]'>
                     <ul className='grid grid-cols-1 xl:grid-cols-2 gap-[30px] '>

@@ -1,6 +1,5 @@
-import { Item } from '@radix-ui/react-select';
 import Link from 'next/link';
-import {FaGithub, FaLinkedin, FaLinkedinIn} from 'react-icons/fa';
+import {FaGithub,  FaLinkedinIn} from 'react-icons/fa';
 import {SiWakatime} from 'react-icons/si'
 const mySocials = [
   {icon:<FaGithub/>,path:'https://github.com/OnTheFlyCoding'},
