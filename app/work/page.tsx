@@ -52,7 +52,7 @@ const projects = [
     description:'Dynamic website for an Electric Bike Kit Company. The website showcases the DIY Electric Bike Kits for sale and useful information on how the organization began. A support page for common troubleshooting.',
     stack:[{name:'React'},{name:'Javascript'}, {name:'Css 3'},{name:'HTML 5'}, {name:'Vite'}],
     image:images.bvolt,
-    live:'https://ontheflycoding.github.io/bridgevolt_website',
+    live:'https://bridgevolt.org',
     github:'https://github.com/OnTheFlyCoding/bridgevolt_website'
   },
 ]

@@ -90,11 +90,10 @@ const Contact = () => {
             className="flex flex-col gap-6 p-10 bg-[#27272c]
             rounded-xl">
               <h3 className="text-4xl text-accent">Lets Work Together</h3>
-              <p className="text-white/60"> Lorem ipsum dolor sit amet 
-              consectetur adipisicing elit. Quae perspiciatis provident, 
-              culpa voluptas et nam, soluta non facilis aut labore 
-              assumenda odit ut temporibus ullam quibusdam enim error.
-               Asperiores, quo!
+              <p className="text-white/60"> 
+              My goal is to leverage technology in order to solve real-world challenges 
+              and drive innovation. Let&apos;s connect and explore how I can 
+              help bring your ideas to life with cutting-edge software!
               </p>
               {/* input */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
